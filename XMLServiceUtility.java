@@ -16,7 +16,6 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathConstants;
-import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
 import org.w3c.dom.Document;
@@ -74,7 +73,6 @@ public class XMLServiceUtility {
 		return document;
 		
 	}
-	
 
 	public File convertStringToFile(String documentToString) {
 		File fnew = new File("src/request/request1.xml");
@@ -113,52 +111,6 @@ public class XMLServiceUtility {
 	}
 	
 	
-	//temporary method - not working
-	public org.w3c.dom.Node getElementByXPaths(Document document,
-			String xPath) {
-		if(xPath != null){
-			String[] xPaths = xPath.split("/");
-			Node node = null;
-			for(int index=0; index < xPaths.length;index++){
-				String tagName = getTagNameOnly(xPaths[index]);
-				Integer position = null;
-				if(tagName != null){
-					position = getIndexPosition(xPaths[index]);
-				}
-				if(index == 0)
-					node = getElementByTagName(document , tagName);
-				else {
-					node = getElementByTagName(node, tagName, position);
-				}
-				if(index == xPaths.length-1){
-					return node;
-				}
-				
-				
-			}
-		}
-		return null;
-	}
-	
-	private String getTagNameOnly(String tag) {
-		if(tag != null && tag.contains("[")){
-			return tag.substring(0, tag.indexOf("["));
-		}
-		return tag;
-	}
-
-	private Integer getIndexPosition(String tag) {
-		if(tag != null && tag.contains("[")){
-			String position = tag.substring(tag.indexOf("[")+1, tag.indexOf("]"));
-			try{
-				return Integer.parseInt(position);
-			}catch(Exception e){
-				System.out.println("Invalid XPath");
-			}
-		}
-		return null;
-	}
-
 	public org.w3c.dom.Node getElementByTagName(Document document,
 			String elementName) {
 		NodeList nodeList = document.getElementsByTagName("*");
