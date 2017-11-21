@@ -1,1 +1,5 @@
-http://viralpatel.net/blogs/20-useful-java-code-snippets-for-java-developers/
+Core jav:
+  http://viralpatel.net/blogs/20-useful-java-code-snippets-for-java-developers/
+  
+Rest Assured
+  https://semaphoreci.com/community/tutorials/testing-rest-endpoints-using-rest-assured
