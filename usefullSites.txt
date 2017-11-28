@@ -1,5 +1,9 @@
-Core jav:
+Core java:
   http://viralpatel.net/blogs/20-useful-java-code-snippets-for-java-developers/
   
 Rest Assured
   https://semaphoreci.com/community/tutorials/testing-rest-endpoints-using-rest-assured
+  
+  
+  apache cxf:
+  https://skills421.com/2014/06/15/create-restful-web-services-with-jboss-maven-apache-cxf-and-spring/
