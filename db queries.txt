@@ -1,0 +1,8 @@
+to drop the database tables:
+SELECT 
+    'ALTER TABLE ' + OBJECT_NAME(parent_object_id) + 
+    ' DROP CONSTRAINT ' + name
+FROM sys.foreign_keys 
+
+SELECT  'DROP TABLE [' + name + '];'
+FROM    sys.tables  
