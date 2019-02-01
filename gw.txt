@@ -1,0 +1,5 @@
+gwb clean
+gwb cleanidea
+gwb codegen
+gwb studio
+gwb build
