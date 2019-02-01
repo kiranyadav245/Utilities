@@ -3,3 +3,6 @@ gwb cleanidea
 gwb codegen
 gwb studio
 gwb build
+
+
+upgradeinstances --full upgrade/database full upgrade
